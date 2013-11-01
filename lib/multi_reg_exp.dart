@@ -1,7 +1,6 @@
 library multi_reg_exp;
 
 import 'dart:collection';
-import 'package:meta/meta.dart';
 
 part 'multi_reg_exp_iterable.dart';
 part 'string_container.dart';

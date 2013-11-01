@@ -5,4 +5,12 @@ class StringContainer{
   StringContainer(String this._string);
   
   String get string => this._string;
+  
+  Iterable<Match> allMatches(RegExp regExp){
+    return regExp.allMatches(string);
+  }
+  
+  Iterable<Match> allMatchesFromMultiRegExp(MultiRegExp multiRegExp){
+    return new MultiRegExpIterable(multiRegExp,this);
+  }
 }
