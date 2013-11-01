@@ -1,0 +1,7 @@
+name: multi_reg_exp
+version: 0.1.0
+author: Christophe Hurpeau <christophe@hurpeau.com>
+description: find multiple regExp on strings
+dependencies:
+  meta: '>=0.8.7'
+  unittest: '>=0.8.7'
