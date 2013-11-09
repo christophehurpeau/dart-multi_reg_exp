@@ -1,8 +1,12 @@
 name: multi_reg_exp
-version: 0.1.1
+version: 0.1.2
 author: Christophe Hurpeau <christophe@hurpeau.com>
 description: find multiple regExp on strings
 homepage: https://github.com/christophehurpeau/dart-multi_reg_exp
 documentation: https://github.com/christophehurpeau/dart-multi_reg_exp/wiki
+
+environment:
+  sdk: ">=0.8.10+6 <2.0.0"
+
 dependencies:
-  unittest: '>=0.8.7'
+  unittest: '>=0.9.0 <0.10.0'
