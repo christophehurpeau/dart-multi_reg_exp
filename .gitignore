@@ -1,8 +1,8 @@
-.DS_Store
-packages
-.project
 pubspec.lock
+packages
+
 /.settings
+.project
 
 #*
 *$
@@ -11,6 +11,6 @@ pubspec.lock
 *.log
 *.old
 *~
-,*
 .#*
-
+.DS_Store
+,*
