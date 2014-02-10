@@ -5,35 +5,38 @@ import 'dart:collection';
 part 'multi_reg_exp_iterable.dart';
 part 'string_container.dart';
 
-class MultiRegExp implements RegExp{
+class MultiRegExp implements RegExp {
   Iterable<RegExp> regExps;
-  
-  MultiRegExp() : this.regExps = new List();
+
+  MultiRegExp(): this.regExps = new List();
   MultiRegExp.fromIterable(Iterable<RegExp> this.regExps);
-  
+
   Iterable<Match> allMatches(String input) {
-    return new MultiRegExpIterable.fromString(this,input);
+    return new MultiRegExpIterable.fromString(this, input);
   }
   Iterable<Match> allMatchesFromStringContainer(StringContainer stringContainer) {
-    return new MultiRegExpIterable(this,stringContainer);
+    return new MultiRegExpIterable(this, stringContainer);
   }
 
   Match firstMatch(String input) {
     //print('--- MultiRegExp: firstMatch "'+input+'"---');
     Match found = null, m;
-    for(RegExp regExp in this.regExps){
+    for (RegExp regExp in regExps) {
       m = regExp.firstMatch(input);
       //print('RegExp= '+regExp.pattern+'; match= '+(m == null ? 'null' : m[0]));
-      if(m != null && (found == null || m.start < found.start))
+      if (m != null && (found == null || m.start < found.start)) {
         found = m;
+      }
     }
     //print('--- MultiRegExp: firstMatch END ---');
     return found;
   }
 
   bool hasMatch(String input) {
-    for(RegExp regExp in this.regExps){
-      if(regExp.hasMatch(input)) return true;
+    for (RegExp regExp in this.regExps) {
+      if (regExp.hasMatch(input)) {
+        return true;
+      }
     }
     return false;
   }
@@ -44,10 +47,11 @@ class MultiRegExp implements RegExp{
 
   Match matchAsPrefix(String string, [int start = 0]) {
     Match found = null, m;
-    for(RegExp regExp in this.regExps){
+    for (RegExp regExp in this.regExps) {
       m = regExp.matchAsPrefix(string,start);
-      if(m != null && (found == null || m.start < found.start))
+      if (m != null && (found == null || m.start < found.start)) {
         found = m;
+      }
     }
     return found;
   }
