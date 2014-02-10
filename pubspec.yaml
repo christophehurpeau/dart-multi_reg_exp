@@ -3,8 +3,8 @@ author: Christophe Hurpeau <christophe@hurpeau.com>
 version: 0.2.0
 homepage: https://github.com/christophehurpeau/dart-multi_reg_exp
 description: Find multiple regExp on strings
-documentation: https://github.com/christophehurpeau/dart-multi_reg_exp/wiki
+documentation: http://christophehurpeau.github.io/dart-multi_reg_exp/
 environment:
   sdk: '>=1.1.0 <2.0.0'
 dependencies:
-  unittest: '>=0.9.0 <0.10.0'
+  unittest: '>=0.10.0 <0.11.0'
